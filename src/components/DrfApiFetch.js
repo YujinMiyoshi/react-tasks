@@ -9,7 +9,7 @@ const DrfApiFetch = () => {
   const [id, setId] = useState(1)
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/tasks/',{
+    axios.get('https://react-tasks.vercel.app/api/tasks/',{
       headers: {
         'Authorization': 'Token d4a1b9d83bd0fa0cc86394c6471a2668a04ec401'
       }
@@ -18,7 +18,7 @@ const DrfApiFetch = () => {
   },[])
 
   const getTask = () => {
-    axios.get(`http://127.0.0.1:8000/api/tasks/${id}`,{
+    axios.get(`https://react-tasks.vercel.app/api/tasks/${id}`,{
       headers: {
         'Authorization': 'Token d4a1b9d83bd0fa0cc86394c6471a2668a04ec401'
       }
@@ -27,7 +27,7 @@ const DrfApiFetch = () => {
   }
 
   const deleteTask = (id) => {
-    axios.delete(`http://127.0.0.1:8000/api/tasks/${id}`,{
+    axios.delete(`https://react-tasks.vercel.app/api/tasks/${id}`,{
       headers: {
         'Authorization': 'Token d4a1b9d83bd0fa0cc86394c6471a2668a04ec401'
       }
@@ -44,7 +44,7 @@ const DrfApiFetch = () => {
     const data = {
       title: task.title
     }
-    axios.post(`http://127.0.0.1:8000/api/tasks/`, data,{
+    axios.post(`https://react-tasks.vercel.app/api/tasks/`, data,{
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Token d4a1b9d83bd0fa0cc86394c6471a2668a04ec401'
@@ -58,7 +58,7 @@ const DrfApiFetch = () => {
   const editTask = (task) => {
 
 
-    axios.put(`http://127.0.0.1:8000/api/tasks/${task.id}/`, task,{
+    axios.put(`https://react-tasks.vercel.app/api/tasks/${task.id}/`, task,{
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Token d4a1b9d83bd0fa0cc86394c6471a2668a04ec401'
